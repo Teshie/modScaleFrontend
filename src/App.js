@@ -39,8 +39,8 @@ function App() {
   };
   return (
     <div className="w-full bg ">
-      <div className="h-[43rem] relative z-50">
-        <img className="h-full" src={headerBackground} alt="logo" />
+      <div className="h-[43rem] w-full relative z-50">
+        <img className="h-full w-full" src={headerBackground} alt="logo" />
       </div>
       <div className="absolute z-50  top-4 w-full p-2 flex justify-center space-x-6">
         <div className="flex justify-between mx-16 w-full px-10">
