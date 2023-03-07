@@ -8,10 +8,10 @@ const Deals = () => {
         <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 -gap-10 w-full">
           {" "}
           <div className="flex flex-col space-y-4">
-            <div className="text-4xl font-bold flex space-x-2">
+            <div className="text-4xl  font-bold flex space-x-2">
               <p> Create custom</p> <p className="text-purple-700">deals</p>
             </div>
-            <p className="text-purple-700 text-4xl font-bold ">quickly</p>
+            <p className="text-purple-700 font-bold text-4xl">quickly</p>
             <p className="">
               {" "}
               Trials, spend commitments, promotions, custom<br></br> credits are

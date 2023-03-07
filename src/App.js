@@ -144,7 +144,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="  mt-10">
+          <div className="  mt-10 hidden md:inline">
             <img
               className="w-[35] h-[497px] object-cover"
               src={illustration}
