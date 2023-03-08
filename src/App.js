@@ -45,6 +45,7 @@ function App() {
         <img className="h-full w-full" src={headerBackground} alt="logo" />
       </div>
       <div className="absolute z-50  top-4 w-full p-2 flex justify-center space-x-6">
+        {/* <CustomerReview /> */}
         <Header />
         <Hero />
       </div>

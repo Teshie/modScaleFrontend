@@ -27,7 +27,7 @@ const Subscription = () => {
       });
   };
   return (
-    <div className=" mt-36 mx-28 rounded">
+    <div className=" mt-36 mx-20 rounded">
       <div className="h-64 px-10 subscriptionBanner rounded-lg w-full grid place-items-center gap-10 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <div className="font-bold text-xl md:text-4xl lg:text-4xl 2xl:text-4xl">
           <p>

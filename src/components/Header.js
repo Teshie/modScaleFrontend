@@ -9,11 +9,16 @@ const Header = () => {
     );
   };
   return (
-    <div className=" flex justify-between items-center mx-20 w-full mb-10">
-      <div>
+    <div className="relative mb-10 flex justify-between items-center  w-full ">
+      <div className="hidden xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline absolute top-10 left-14">
         <img className="cover h-10" src={logo} alt="logo" />
       </div>
-      <div className="block sm:hidden">
+      <div className=" xs:inline sm:inline md:hidden lg:hidden xl:hidden 2xl:hidden absolute left-0  ">
+        <div className="">
+          <img className="cover h-10" src={logo} alt="logo" />
+        </div>
+      </div>
+      <div className="absolute right-0 xs:inline sm:inline md:hidden lg:hidden xl:hidden 2xl:hidden">
         <div
           onClick={handleButtonClick}
           className=" flex justify-center space-x-1 items-center text-center font bg-purple-700 text-white px-3 rounded"

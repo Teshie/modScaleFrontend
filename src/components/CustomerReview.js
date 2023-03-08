@@ -28,7 +28,7 @@ const CustomerReview = () => {
             <div className="flex justify-center items-center" key={items.id}>
               <div className="bg-white w-64 rounded-lg shadow-lg p-6">
                 <div className="flex justify-start">
-                  <img src={comment} alt="commentIcon" />
+                  <img className="h-8 w-8" src={comment} alt="commentIcon" />
                 </div>
                 <div className="mt-4 text-gray-800">
                   <p className="text-base text-left">{items.comment}</p>
@@ -40,10 +40,8 @@ const CustomerReview = () => {
                     alt="User Avatar"
                   />
                   <div>
-                    <p className="text-gray-800 font-semibold">
-                      {items.username}
-                    </p>
-                    <p className="text-gray-800 ">{items.company}</p>
+                    <p className=" ">{items.username}</p>
+                    <p className="text-gray-500 text-sm">{items.company}</p>
                   </div>
                 </div>
               </div>
