@@ -21,12 +21,12 @@ const CustomerReview = () => {
   const currentReviews = customerReview.slice(offset, offset + itemsPerPage);
 
   return (
-    <div className="px-20  relative">
-      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
+    <div className="xs:px-24 sm:px-0 md:px-0 lg:px-0 xl:px-[8rem] 2xl:px-[39rem]">
+      <div className="px-2 grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
         {currentReviews.map((items) => {
           return (
             <div className="flex justify-center items-center" key={items.id}>
-              <div className="bg-white  rounded-lg shadow-lg p-6">
+              <div className="bg-white w-70 rounded-lg shadow-lg p-6">
                 <div className="flex justify-start">
                   <img className="h-8 w-8" src={comment} alt="commentIcon" />
                 </div>

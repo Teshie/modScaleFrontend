@@ -5,7 +5,7 @@ import icon from "./../assets/Icon.png";
 
 const RevenueManagement = () => {
   return (
-    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 mt-10 ">
+    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 flex justify-center items-center mt-10 w-full px-12 pr-12">
       <div className="flex flex-col  space-y-6">
         <p className=" justify-center items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex space-x-2">
           <p>Automate software revenue</p>
