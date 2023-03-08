@@ -18,8 +18,8 @@ const Deals = () => {
               all just clicks away
             </p>
           </div>
-          <div className="object-cover  w-[32rem] h-[20rem]">
-            <img className="w-full h-full" src={deals} alt="logo" />
+          <div className="flex justify-center items-center object-cover  w-[32rem] h-[20rem]">
+            <img className="w-2/3" src={deals} alt="logo" />
           </div>{" "}
         </div>
       </div>
