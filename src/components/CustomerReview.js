@@ -1,72 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import worldMap from "./../assets/worldMap.png";
+import comment from "./../assets/comment.svg";
+import arrowLeft from "./../assets/arrow-left.svg";
+import arrowRight from "./../assets/arrow-right.svg";
 import RevenueManagement from "./RevenueManagement";
 import CustomerComment from "./CustomerComment";
+import { customerReview } from "../data/data";
+import ReactPaginate from "react-paginate";
 
 const CustomerReview = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 4;
+  const pageCount = Math.ceil(customerReview.length / itemsPerPage);
+
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
+  const offset = currentPage * itemsPerPage;
+  const currentReviews = customerReview.slice(offset, offset + itemsPerPage);
+
   return (
-    <div className="">
-      <div className=" flex justify-center items-center mx-28">
-        {/* <div className="h-64 md:h-96 lg:h-128 bg-fixed bg-center bg-cover filter brightness-50">
-          <img
-            className="h-full  filter brightness-50"
-            src={worldMap}
-            alt="worldMap"
-          />
-        </div> */}
-        <div className="inline-block p-4 text-white h-full">
-          <div className="flex justify-center items-center  w-full h-full text-center">
-            <div
-              className="
-h-full w-full bg-white   rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 
-"
-            >
-              <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-10">
-                <CustomerComment />
-                <CustomerComment />
-                <CustomerComment />
-              </div>
-              <div class="flex justify-between items-center px-36">
-                <div class="flex items-center">
-                  <span class="text-gray-500  hover:text-gray-800 cursor-pointer ml-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                      />
-                    </svg>
-                  </span>
+    <div className="px-16 relative">
+      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 gap-1">
+        {currentReviews.map((items) => {
+          return (
+            <div className="flex justify-center items-center" key={items.id}>
+              <div className="bg-white w-64 rounded-lg shadow-lg p-6">
+                <div className="flex justify-start">
+                  <img src={comment} alt="commentIcon" />
                 </div>
-                <div class="flex items-center">
-                  <span class="text-white bg-purple-700 px-1 m-2  cursor-pointer mr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </span>
+                <div className="mt-4 text-gray-800">
+                  <p className="text-base text-left">{items.comment}</p>
+                </div>
+                <div className="flex items-center mt-4">
+                  <img
+                    className="h-8 w-8 rounded-full mr-2"
+                    src="https://i.pravatar.cc/50"
+                    alt="User Avatar"
+                  />
+                  <div>
+                    <p className="text-gray-800 font-semibold">
+                      {items.username}
+                    </p>
+                    <p className="text-gray-800 ">{items.company}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
+      </div>
+      <div className="flex justify-between items-center mt-6 px-4">
+        <ReactPaginate
+          previousLabel={<img src={arrowLeft} />}
+          nextLabel={<img src={arrowRight} />}
+          pageCount={pageCount}
+          pageLinkClassName="hidden"
+          onPageChange={handlePageClick}
+          containerClassName="flex flex-wrap justify-between items-center w-full"
+          pageClassName="text-purple-700 hover:text-purple-900 cursor-pointer mx-2"
+          activeLinkClassName="text-white bg-purple-700 px-2 py-1 rounded-md mx-2"
+          previousClassName="text-white bg-purple-700 px-2 py-1 rounded-md cursor-pointer"
+          nextClassName="text-white bg-purple-700 px-2 py-1 rounded-md cursor-pointer"
+          disabledClassName="opacity-50 cursor-not-allowed mx-2"
+          breakClassName="mx-2"
+          style={{ "--pagination-page-display": "none" }}
+        />
       </div>
     </div>
   );

@@ -53,3 +53,12 @@
 
   color: #12262e;
 }
+.react-paginate ul li:not(.previous):not(.next) {
+  display: none;
+}
+.react-paginate ul li:not(.previous):not(.next) {
+  display: var(--pagination-page-display);
+}
+.react-paginate ul li {
+  display: none !important;
+}

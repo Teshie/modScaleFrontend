@@ -37,9 +37,44 @@ export const revenueManagement = [
 export const customerReview = [
   {
     id: 1,
-    title: "Drive trust and transparency ",
-    description:
-      "Provide granular, real-time usage and billing insights  to end-users natively in your app",
-    img: driveTrust,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
+  },
+  {
+    id: 2,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
+  },
+  {
+    id: 3,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
+  },
+  {
+    id: 4,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
+  },
+  {
+    id: 5,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
+  },
+  {
+    id: 6,
+    comment:
+      "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator",
+    company: "Meta",
+    username: "Joe Doe",
   },
 ];
