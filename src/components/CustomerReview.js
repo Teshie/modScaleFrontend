@@ -21,12 +21,12 @@ const CustomerReview = () => {
   const currentReviews = customerReview.slice(offset, offset + itemsPerPage);
 
   return (
-    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 px-16 relative">
-      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-2">
+    <div className="px-20  relative">
+      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
         {currentReviews.map((items) => {
           return (
             <div className="flex justify-center items-center" key={items.id}>
-              <div className="bg-white w-64 rounded-lg shadow-lg p-6">
+              <div className="bg-white  rounded-lg shadow-lg p-6">
                 <div className="flex justify-start">
                   <img className="h-8 w-8" src={comment} alt="commentIcon" />
                 </div>
@@ -59,7 +59,7 @@ const CustomerReview = () => {
           containerClassName="flex flex-wrap justify-between items-center w-full"
           pageClassName="text-purple-700 hover:text-purple-900 cursor-pointer mx-2"
           activeLinkClassName="text-white bg-purple-700 px-2 py-1 rounded-md mx-2"
-          previousClassName="text-white bg-purple-700 px-2 py-1 rounded-md cursor-pointer"
+          previousClassName="text-black bg-white shadow-lg px-2 py-1 rounded-md cursor-pointer"
           nextClassName="text-white bg-purple-700 px-2 py-1 rounded-md cursor-pointer"
           disabledClassName="opacity-50 cursor-not-allowed mx-2"
           breakClassName="mx-2"

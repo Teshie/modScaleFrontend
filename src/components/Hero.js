@@ -36,9 +36,15 @@ const Hero = () => {
   };
   return (
     <div className="mt-6 absolute z-50   w-full p-2 flex justify-center space-x-6">
-      <div className="absolute    w-full  flex justify-around items-center">
+      <div className="relative    w-full  flex justify-around items-center">
         <div className="flex flex-col ">
           <div className="flex  flex-col space-y-4 items-start">
+            <img
+              className="absolute top-2 hidden xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline cover h-10"
+              src={logo}
+              alt="logo"
+            />
+
             <p className="lounchText">
               Launch and optimize any <br></br>SaaS pricing with <br></br>
               confidence.
