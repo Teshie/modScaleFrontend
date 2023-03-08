@@ -54,7 +54,7 @@ function App() {
         <Deals />
         <PricingModel />
         <RevenueManagement />
-        <div className="flex justify-center items-center mb-10 text-4xl font-bold">
+        <div className="flex justify-center items-center mb-10 xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl font-bold">
           <p>Why customers love us?</p>
         </div>
         <CustomerReview />

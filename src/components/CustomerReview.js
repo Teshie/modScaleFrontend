@@ -22,7 +22,7 @@ const CustomerReview = () => {
 
   return (
     <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 px-16 relative">
-      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 ">
+      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-2">
         {currentReviews.map((items) => {
           return (
             <div className="flex justify-center items-center" key={items.id}>
