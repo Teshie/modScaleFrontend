@@ -3,7 +3,7 @@ import pricingModel from "./../assets/pricingModel.png";
 
 const PricingModel = () => {
   return (
-    <div className="flex justify-center items-center mt-10 w-full px-12 pr-12">
+    <div className="flex justify-center items-center mt-10 w-full xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64">
       <div className="flex flex-col justify-center items-center space-y-6 w-full">
         <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  w-full">
           {" "}

@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
             <div className="flex-flex-col space-y-4 mt-4">
               <div>
-                <p className="lastText text-xl">
+                <p className="xs:text-sm sm:text-md md:text-xl lg:text-xl xl:text-xl 2xl:text-xl lastText">
                   Infrastructure constraints in monetizing your go-to-market
                   <br></br>
                   strategy? Struggling to find out the right pricing model?
@@ -109,7 +109,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:inline">
+        <div className="hidden lg:inline">
           <div className="flex flex-col items-end">
             <div className=" flex justify-center space-x-1 items-center text-center font bg-purple-700 text-white px-3 rounded">
               <button onClick={handleButtonClick} className="cursor-pointer">
@@ -130,7 +130,7 @@ const Hero = () => {
                 />
               </svg>
             </div>
-            <div className="  mt-10 hidden md:inline">
+            <div className="  mt-10 xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline ">
               <img
                 className="w-[35rem]  object-cover"
                 src={illustration}

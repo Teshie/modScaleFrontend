@@ -10,7 +10,7 @@ const Header = () => {
   };
   return (
     <div className="relative mb-10 flex justify-between items-center  w-full ">
-      <div className="hidden xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline absolute top-10 left-14">
+      <div className="hidden xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline absolute top-10 xs:left-14 sm:left-14 md:left-14 lg:left-14 xl:left-14 2xl:left-96">
         <img className="cover h-10" src={logo} alt="logo" />
       </div>
       <div className=" xs:inline sm:inline md:hidden lg:hidden xl:hidden 2xl:hidden absolute left-16  ">

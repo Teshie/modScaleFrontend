@@ -21,8 +21,8 @@ const CustomerReview = () => {
   const currentReviews = customerReview.slice(offset, offset + itemsPerPage);
 
   return (
-    <div className="px-16 relative">
-      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 gap-1">
+    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 px-16 relative">
+      <div className=" grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 ">
         {currentReviews.map((items) => {
           return (
             <div className="flex justify-center items-center" key={items.id}>
@@ -49,7 +49,7 @@ const CustomerReview = () => {
           );
         })}
       </div>
-      <div className="flex justify-between items-center mt-6 px-4">
+      <div className="flex justify-between items-center mt-6  px-14">
         <ReactPaginate
           previousLabel={<img src={arrowLeft} />}
           nextLabel={<img src={arrowRight} />}
