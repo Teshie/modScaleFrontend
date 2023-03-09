@@ -63,5 +63,86 @@
   display: none !important;
 }
 .width {
-  width: 77%;
+  width: 75%;
+}
+.headerWidth {
+  width: 32%;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+  .headerWidth {
+    width: 75%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .headerWidth {
+    width: 75%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .headerWidth {
+    width: 75%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .headerWidth {
+    width: 75%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .headerWidth {
+    width: 30%;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.fade-review-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-review-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.fade-review-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-review-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }

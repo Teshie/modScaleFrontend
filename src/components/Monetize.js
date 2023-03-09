@@ -40,7 +40,7 @@ const Monetize = () => {
         <div className="flex flex-col justify-center items-center space-y-6 w-full">
           <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  ">
             {" "}
-            <div className="object-cover  w-[28rem] h-[15rem]">
+            <div className="object-cover  w-[28rem] h-[19rem]">
               <img className="w-full h-full" src={monetise} alt="logo" />
             </div>{" "}
             <div className="flex flex-col space-y-4">

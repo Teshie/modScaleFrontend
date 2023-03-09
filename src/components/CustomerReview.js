@@ -8,6 +8,7 @@ import CustomerComment from "./CustomerComment";
 import { customerReview } from "../data/data";
 import { revenueManagement } from "../data/data";
 import ReactPaginate from "react-paginate";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const CustomerReview = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -20,41 +21,62 @@ const CustomerReview = () => {
 
   const offset = currentPage * itemsPerPage;
   const currentReviews = customerReview.slice(offset, offset + itemsPerPage);
+  const fadeTransitionDuration = 300;
 
   return (
-    <div className=" mx-auto mt-10">
+    <div className="width mx-auto mt-10">
       <div className="flex justify-center items-center  mx-auto">
         <div className="flex flex-col  space-y-6">
-          <p className=" justify-center items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex space-x-2">
+          <p className="pb-3 justify-center items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex">
             <p>Why customers love us?</p>
           </p>
-          <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-            {currentReviews.map((items) => {
-              return (
-                <div className="h-76 cursor-pointer hover:shadow-lg bg-white rounded-lg  w-56   flex flex-col justify-start p-3.5">
-                  <div className="flex justify-start items-start ">
-                    <img className="h-8 w-8" src={comment} alt="commentIcon" />
-                  </div>
-                  <div className="mt-4 text-gray-800 ">
-                    <p className="text-base text-left">{items.comment}</p>
-                  </div>
+          <TransitionGroup>
+            <CSSTransition
+              key={currentPage}
+              timeout={fadeTransitionDuration}
+              classNames="fade"
+              style={{ width: "100%" }}
+            >
+              <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10 overflow-hidden">
+                {currentReviews.map((items) => (
+                  <CSSTransition
+                    key={items.id}
+                    timeout={fadeTransitionDuration}
+                    classNames="fade-review"
+                  >
+                    <div className="h-76 cursor-pointer hover:shadow-lg bg-white rounded-lg  w-56   flex flex-col justify-start p-3.5">
+                      <div className="flex justify-start items-start ">
+                        <img
+                          className="h-8 w-8"
+                          src={comment}
+                          alt="commentIcon"
+                        />
+                      </div>
+                      <div className="mt-4 text-gray-800 ">
+                        <p className="text-base text-left">{items.comment}</p>
+                      </div>
 
-                  <div className="flex items-center mt-2">
-                    <img
-                      className="h-8 w-8 rounded-full mr-2"
-                      src="https://i.pravatar.cc/50"
-                      alt="User Avatar"
-                    />
-                    <div>
-                      <p className=" ">{items.username}</p>
-                      <p className="text-gray-500 text-sm">{items.company}</p>
+                      <div className="flex items-center mt-2">
+                        <img
+                          className="h-8 w-8 rounded-full mr-2"
+                          src="https://i.pravatar.cc/50"
+                          alt="User Avatar"
+                        />
+                        <div>
+                          <p className=" ">{items.username}</p>
+                          <p className="text-gray-500 text-sm">
+                            {items.company}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="flex justify-between items-center mt-6  px-14">
+                  </CSSTransition>
+                ))}
+              </div>
+            </CSSTransition>
+          </TransitionGroup>
+
+          <div className="flex justify-between items-center mt-6  ">
             <ReactPaginate
               previousLabel={<img src={arrowLeft} />}
               nextLabel={<img src={arrowRight} />}
