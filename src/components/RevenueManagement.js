@@ -5,9 +5,9 @@ import icon from "./../assets/Icon.png";
 
 const RevenueManagement = () => {
   return (
-    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 flex justify-center items-center mt-10 w-full px-12 pr-12">
+    <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 flex justify-center items-center mt-10  w-full px-12 pr-12">
       <div className="flex flex-col  space-y-6">
-        <p className=" justify-center items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex space-x-2">
+        <p className=" justify-center mb-4 items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex space-x-2">
           <p>Automate software revenue</p>
           <p className="text-purple-700">management without any code</p>
         </p>
@@ -17,7 +17,7 @@ const RevenueManagement = () => {
               <div className="h-76 cursor-pointer hover:shadow-lg hover:bg-white hover:rounded-lg  w-56   flex flex-col justify-center items-center">
                 <div>
                   <img
-                    className="objectCover w-32 h-32"
+                    className="object-cover w-32 h-32"
                     src={items.img}
                     alt="customer retention"
                   />

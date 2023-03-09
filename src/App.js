@@ -15,6 +15,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 function App() {
   const [email, setEmail] = useState("");
 
@@ -51,11 +52,8 @@ function App() {
         <Deals />
         <PricingModel />
         <RevenueManagement />
-        <div className="flex justify-center items-center mb-10 xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl font-bold">
-          <p>Why customers love us?</p>
-        </div>
         <CustomerReview />
-        <Subscription />
+        <Footer />
       </div>
       <div>
         <img

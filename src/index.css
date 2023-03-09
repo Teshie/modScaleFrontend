@@ -62,3 +62,6 @@
 .react-paginate ul li {
   display: none !important;
 }
+.width {
+  width: 77%;
+}
