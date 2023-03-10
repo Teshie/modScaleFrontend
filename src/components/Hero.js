@@ -35,8 +35,8 @@ const Hero = () => {
       });
   };
   return (
-    <div className="mt-6 absolute z-50   w-full p-2 flex justify-center space-x-6">
-      <div className="relative    w-full  flex justify-around items-center">
+    <div className=" w-11/12 overflow-x-hidden mt-6 absolute z-50   flex justify-center">
+      <div className="relative flex justify-around items-center space-x-6">
         <div className="flex flex-col ">
           <div className="flex  flex-col space-y-4 items-start">
             <img

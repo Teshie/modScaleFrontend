@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import worldMap from "./../assets/worldMap.png";
 import comment from "./../assets/comment.svg";
 import arrowLeft from "./../assets/arrow-left.svg";
+import map from "./../assets/map.svg";
 import arrowRight from "./../assets/arrow-right.svg";
 import RevenueManagement from "./RevenueManagement";
 import CustomerComment from "./CustomerComment";
@@ -93,6 +94,7 @@ const CustomerReview = () => {
               style={{ "--pagination-page-display": "none" }}
             />
           </div>
+          {/* <img src={map} /> */}
         </div>
       </div>
     </div>
