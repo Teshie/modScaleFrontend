@@ -37,7 +37,7 @@ const CustomerReview = () => {
               classNames="fade"
               style={{ width: "100%" }}
             >
-              <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10 overflow-hidden">
+              <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10 ">
                 {currentReviews.map((items) => (
                   <CSSTransition
                     key={items.id}

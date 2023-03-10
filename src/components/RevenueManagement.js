@@ -11,7 +11,7 @@ const RevenueManagement = () => {
           <p>Automate software revenue</p>
           <p className="text-purple-700">management without any code</p>
         </p>
-        <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-2">
+        <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2">
           {revenueManagement.map((items) => {
             return (
               <div className="h-76 cursor-pointer hover:shadow-lg hover:bg-white hover:rounded-lg  w-56   flex flex-col justify-center items-center">
