@@ -30,13 +30,13 @@ const Monetize = () => {
     //   </div>
     // </div>
     <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64">
-      <div className="flex justify-center items-center">
-        <p className="xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex space-x-2 ">
-          <p>The fastest way to monetize</p>
+      <div className="px-12 pr-12 flex justify-center items-start">
+        <div className=" flex justify-center items-center flex-col text-4xl xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row font-bold  space-x-2 ">
+          <p className="">The fastest way to monetize</p>
           <p className="text-purple-700">your product usage</p>
-        </p>
+        </div>
       </div>
-      <div className="flex justify-center items-center mt-10 w-full px-12 pr-12">
+      <div className="flex justify-center items-center mt-10 w-full ">
         <div className="flex flex-col justify-center items-center space-y-6 w-full">
           <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  ">
             {" "}

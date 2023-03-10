@@ -10,6 +10,8 @@
     #fcf9fc,
     #fdf8fa
   );
+  width: 100vw !important;
+  max-width: none;
 }
 .subscriptionBanner {
   background: #b598e8;

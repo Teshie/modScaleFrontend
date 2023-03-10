@@ -10,12 +10,13 @@ const PricingModel = () => {
           <div className="flex justify-center items-center object-cover  w-[32rem] h-[20rem]">
             <img className="w-2/3" src={pricingModel} alt="logo" />
           </div>{" "}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col justify-center items-center w-11/12 space-y-4">
             <div className="text-4xl font-bold flex space-x-2">
               <p> Launch new pricing</p>{" "}
-              <p className="text-purple-700">models</p>
             </div>
-            <p className="text-purple-700 text-4xl font-bold ">with breeze</p>
+            <p className="text-purple-700 text-4xl font-bold ">
+              models with breeze
+            </p>
             <p className="">
               {" "}
               Auto-migrate customers, seamlessly switch<br></br> versions or

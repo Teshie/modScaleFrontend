@@ -7,8 +7,8 @@ const Deals = () => {
       <div className="flex flex-col justify-center items-center space-y-6 w-full">
         <div className="grid  place-items-center xs:text-green-500 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  sm:flex-row-reverse">
           {" "}
-          <div className="flex flex-col space-y-4  xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline">
-            <div className="text-4xl  font-bold flex space-x-2">
+          <div className=" flex-col space-y-4 hidden  xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline">
+            <div className="text-4xl  font-bold flex space-x-2 ">
               <p> Create custom</p> <p className="text-purple-700">deals</p>
             </div>
             <p className="text-purple-700 font-bold text-4xl">quickly</p>

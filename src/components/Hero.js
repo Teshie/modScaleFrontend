@@ -50,14 +50,14 @@ const Hero = () => {
               confidence.
             </p>
             <div className="middleText">
-              <p className=" flex ">
+              <p class="flex text-base xs:text-base sm:text-lg md:text-xl xl:text-2xl">
                 ModScale{" "}
                 <p className="text-purple-700 mr-1 ml-1">
                   maximizes your revenue
                 </p>{" "}
                 while
               </p>
-              <p>
+              <p class=" text-base xs:text-base sm:text-lg md:text-xl xl:text-2xl">
                 {" "}
                 saving time and resources to stay focused on<br></br> what's
                 most important

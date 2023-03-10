@@ -39,15 +39,15 @@ function App() {
       });
   };
   return (
-    <div className="w-full bg ">
-      <div className="h-[46rem] w-full relative z-50">
-        <img className="h-full w-full" src={headerBackground} alt="logo" />
+    <div class="max-w-none w-screen bg">
+      <div class="h-[48rem] w-full relative z-50">
+        <img class="h-full w-full" src={headerBackground} alt="logo" />
       </div>
-      <div className="absolute z-50  top-4 w-full p-2 flex justify-center space-x-6">
+      <div class="absolute z-50 top-4 w-full p-2 flex justify-center space-x-6">
         <Header />
         <Hero />
       </div>
-      <div className=" relative z-30">
+      <div class="relative z-30">
         <Monetize />
         <Deals />
         <PricingModel />
