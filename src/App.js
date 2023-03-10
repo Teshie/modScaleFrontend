@@ -15,7 +15,9 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+import Test from "./components/BannerFooter";
+import BottomFooter from "./components/BottomFooter";
+import BannerFooter from "./components/BannerFooter";
 function App() {
   const [email, setEmail] = useState("");
 
@@ -53,7 +55,8 @@ function App() {
         <PricingModel />
         <RevenueManagement />
         <CustomerReview />
-        <Footer />
+        <BannerFooter />
+        <BottomFooter />
       </div>
       <div>
         <img
