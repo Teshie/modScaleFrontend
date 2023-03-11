@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import worldMap from "./../assets/worldMap.png";
 import comment from "./../assets/comment.svg";
 import arrowLeft from "./../assets/arrow-left.svg";
@@ -12,6 +12,16 @@ import ReactPaginate from "react-paginate";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const CustomerReview = () => {
+  const reviewsGridRef = useRef(null);
+
+  useEffect(() => {
+    if (reviewsGridRef.current) {
+      const reviewsGridHeight = reviewsGridRef.current.offsetHeight;
+      const parentContainer = reviewsGridRef.current.parentNode;
+      parentContainer.style.height = `${reviewsGridHeight}px`;
+    }
+  }, []);
+
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 4;
   const pageCount = Math.ceil(customerReview.length / itemsPerPage);
@@ -36,14 +46,13 @@ const CustomerReview = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="flex justify-center items-center  mx-auto">
-          <div className="flex flex-col  space-y-6">
+        <div className="flex justify-center items-center h-full overflow-hidden mx-auto">
+          <div ref={reviewsGridRef} className="flex flex-col space-y-6">
             <TransitionGroup>
               <CSSTransition
                 key={currentPage}
                 timeout={fadeTransitionDuration}
                 classNames="fade"
-                style={{ width: "100%" }}
               >
                 <div className="grid  place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10 ">
                   {currentReviews.map((items) => (
