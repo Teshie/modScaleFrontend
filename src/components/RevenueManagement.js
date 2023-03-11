@@ -7,7 +7,7 @@ const RevenueManagement = () => {
   return (
     <div className="xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-64 flex justify-center items-center mt-10  w-full px-12 pr-12">
       <div className="flex flex-col items-center justify-center  space-y-6">
-        <p className=" justify-center mb-4 items-center text-4xl xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row flex-col  font-bold flex space-x-2">
+        <p className=" justify-center mb-4 items-center md:text-4xl lg:text-4xl 2xl:text-4xl text-xl xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row flex-col  font-bold flex space-x-2">
           <p>Automate software revenue</p>
           <p className="text-purple-700">management without any code</p>
         </p>

@@ -13,7 +13,7 @@ const Header = () => {
       {/* <div className="hidden xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline absolute top-10 xs:left-14 sm:left-14 md:left-14 lg:left-14 xl:left-14 2xl:left-72">
         <img className="cover h-10" src={logo} alt="logo" />
       </div> */}
-      <div className=" xs:inline sm:inline md:inline lg:hidden xl:hidden 2xl:hidden absolute left-16  ">
+      <div className=" xs:inline sm:inline md:inline lg:hidden xl:hidden 2xl:hidden absolute left-1  ">
         <div className="">
           <img className="cover h-10" src={logo} alt="logo" />
         </div>

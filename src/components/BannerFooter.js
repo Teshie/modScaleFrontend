@@ -39,9 +39,12 @@ const BannerFooter = () => {
             />
             <button
               type="submit"
-              class="text-white absolute right-2.5 bottom-2.5 bg-purple-700 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="text-white flex justify-center space-x-2 absolute right-2.5 bottom-2.5 bg-purple-700 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Get early access
+              <p>Get</p>{" "}
+              <p className="hidden xs:hidden sm:inline md:inline lg:inline xl:inline 2xl:inline">
+                early access
+              </p>
             </button>
           </div>
         </form>

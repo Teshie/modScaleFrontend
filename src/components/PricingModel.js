@@ -11,10 +11,10 @@ const PricingModel = () => {
             <img className="w-2/3" src={pricingModel} alt="logo" />
           </div>{" "}
           <div className="flex flex-col justify-center items-center w-11/12 space-y-4">
-            <div className="text-4xl font-bold flex space-x-2">
+            <div className=" md:text-4xl lg:text-4xl 2xl:text-4xl text-xl font-bold flex space-x-2">
               <p> Launch new pricing</p>{" "}
             </div>
-            <p className="text-purple-700 text-4xl font-bold ">
+            <p className="md:text-4xl lg:text-4xl 2xl:text-4xl text-xl text-purple-700  font-bold ">
               models with breeze
             </p>
             <p className="">
