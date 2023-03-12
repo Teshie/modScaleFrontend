@@ -168,3 +168,15 @@ body {
   transform: translateY(10px);
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+  .reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reviews-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
