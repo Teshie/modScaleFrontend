@@ -143,6 +143,14 @@ const Hero = () => {
                 alt="illustration image"
               />
             </div>
+
+            {/* <div className="h-[30rem] border-4 border-purple-600 overflow-hidden  mt-10 xs:hidden sm:hidden md:hidden lg:inline xl:inline 2xl:inline ">
+              <img
+                className="w-[35rem]    "
+                src={illustration}
+                alt="illustration image"
+              />
+            </div> */}
           </div>
         </div>
       </div>

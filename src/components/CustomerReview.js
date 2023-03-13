@@ -13,7 +13,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { motion, AnimatePresence } from "framer-motion";
 const CustomerReview = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
   const pageCount = Math.ceil(customerReview.length / itemsPerPage);
 
   const handlePageClick = ({ selected: selectedPage }) => {
@@ -48,7 +48,7 @@ const CustomerReview = () => {
   };
 
   return (
-    <div className="width mx-auto mt-10">
+    <div className="width mx-auto mt-10 flex justify-center flex-col items-center">
       <p className="pb-3 mb-10 justify-center items-center xs:text-xs sm:text-sm md:text-md lg:text-4xl xl:text-4xl  font-bold flex">
         <p>Why customers love us?</p>
       </p>
@@ -62,7 +62,7 @@ const CustomerReview = () => {
         <div className="flex justify-center items-center mx-auto">
           <div className="flex flex-col space-y-6">
             <motion.div
-              className="grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10"
+              className="grid place-items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-20"
               style={{ height: "auto", overflow: "hidden" }}
               variants={paginateVariants}
               initial="hidden"
@@ -73,7 +73,7 @@ const CustomerReview = () => {
                   key={item.id}
                   variants={cardVariants}
                   transition={{ duration }}
-                  className="h-76 cursor-pointer hover:shadow-lg bg-white rounded-lg w-56 flex flex-col justify-start p-3.5"
+                  className="h-76 cursor-pointer hover:shadow-lg bg-white rounded-lg w-64 flex flex-col justify-start p-4"
                 >
                   <div className="flex justify-start items-start">
                     <img className="h-8 w-8" src={comment} alt="commentIcon" />

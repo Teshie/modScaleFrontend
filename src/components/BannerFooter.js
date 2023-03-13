@@ -1,8 +1,17 @@
 import React from "react";
+import avatar from "./../assets/avatar.svg";
 
 const BannerFooter = () => {
   return (
-    <div className="width mx-auto rounded-lg  subscriptionBanner mt-24">
+    <div
+      style={{
+        height: "100%",
+        backgroundImage: `url(${avatar})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+      className="width shadow-xl mx-auto rounded-lg  subscriptionBanner mt-24"
+    >
       <div className="h-64 px-10 border-4 border-groove subscriptionBanner rounded-lg border-purple-200  grid place-items-center gap-10 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <div className="font-bold text-xl md:text-4xl lg:text-4xl 2xl:text-4xl">
           <p>
