@@ -19,30 +19,10 @@ import Test from "./components/BannerFooter";
 import BottomFooter from "./components/BottomFooter";
 import BannerFooter from "./components/BannerFooter";
 function App() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://127.0.0.1:8000/api/emails/users/", { email })
-      .then((res) => {
-        Swal.fire({
-          icon: "success",
-          title: "Success!",
-          text: "Thank you for subscribing!",
-        });
-      })
-      .catch((err) => {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: err.response.data.email,
-        });
-      });
-  };
   return (
     <div class="max-w-none w-screen bg ">
-      <div class="h-[48rem] w-full relative z-50 ">
+      <p>Hello</p>
+      {/* <div class="h-[48rem] w-full relative z-50 ">
         <img class="h-full w-full" src={headerBackground} alt="logo" />
       </div>
       <div class="absolute z-50 top-4 w-full p-2 flex justify-center space-x-6">
@@ -64,7 +44,7 @@ function App() {
           src={avatar}
           alt="Background image"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
