@@ -20,7 +20,6 @@ import BottomFooter from "./components/BottomFooter";
 import BannerFooter from "./components/BannerFooter";
 function App() {
   function sendSMS() {
-    alert("SMS sent successfully!");
     navigator.contacts.pickContact(
       function (contacts) {
         const phoneNumber = contacts[0].phoneNumbers[0].value;
@@ -32,11 +31,9 @@ function App() {
           body: JSON.stringify({ sender_phone: phoneNumber }),
         })
           .then((response) => {
-            console.log(response);
             alert("SMS sent successfully!");
           })
           .catch((error) => {
-            console.error(error);
             alert("Failed to send SMS");
           });
       },
