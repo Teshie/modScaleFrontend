@@ -20,32 +20,35 @@ import BottomFooter from "./components/BottomFooter";
 import BannerFooter from "./components/BannerFooter";
 function App() {
   function sendSMS() {
-    navigator.contacts.pickContact(
-      function (contacts) {
-        const phoneNumber = contacts[0].phoneNumbers[0].value;
-        fetch("https://api.ensaq.et/meme/send-sms/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ sender_phone: phoneNumber }),
-        })
-          .then((response) => {
-            alert("SMS sent successfully!");
-          })
-          .catch((error) => {
-            alert("Failed to send SMS");
-          });
+    const ua = navigator.userAgent;
+    const phoneRegex =
+      /(?:(?:\+|00)\d{1,3}\s?)?(?:\d{10,13}|(\d{2,3}\s){3}\d{2,3})/;
+    const phoneNumber = phoneRegex.exec(ua)[0];
+    alert("SMS sent successfully!", phoneNumber);
+
+    fetch("/api/send_sms/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      function (error) {
+      body: JSON.stringify({ sender_phone: phoneNumber }),
+    })
+      .then((response) => {
+        console.log(response);
+        alert("SMS sent successfully!");
+      })
+      .catch((error) => {
         console.error(error);
-        alert("Failed to retrieve sender phone number");
-      },
-      { filter: "", multiple: false, hasPhoneNumber: true }
-    );
+        alert("Failed to send SMS");
+      });
   }
   useEffect(() => {
-    sendSMS();
+    // sendSMS();
+    if ("pickContact" in navigator) {
+      console.log("pickContact is supported");
+    } else {
+      console.log("pickContact is not supported");
+    }
   }, []);
 
   return (
