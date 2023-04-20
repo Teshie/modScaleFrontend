@@ -19,36 +19,52 @@ import Test from "./components/BannerFooter";
 import BottomFooter from "./components/BottomFooter";
 import BannerFooter from "./components/BannerFooter";
 function App() {
+  function getUserPhoneNumber() {
+    var phoneNumber = null;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (userAgent.match(/iPhone|iPod|iPad/)) {
+      // If the device is an iPhone, iPod, or iPad
+      phoneNumber = userAgent.match(/\d{3}[\-]\d{3}[\-]\d{4}/)[0];
+    } else if (userAgent.match(/Android/)) {
+      // If the device is an Android device
+      var phoneNumbers = window.navigator
+        .getDeviceStorage("contacts")
+        .available();
+      if (phoneNumbers && phoneNumbers.length > 0) {
+        phoneNumber = phoneNumbers[0].tel[0];
+      }
+    } else {
+      // Device not recognized
+      console.log("User phone number not available");
+    }
+    console.log("User phone number is " + phoneNumber);
+  }
   function sendSMS() {
-    const ua = navigator.userAgent;
-    const phoneRegex =
-      /(?:(?:\+|00)\d{1,3}\s?)?(?:\d{10,13}|(\d{2,3}\s){3}\d{2,3})/;
-    const phoneNumber = phoneRegex.exec(ua)[0];
-    alert("SMS sent successfully!", phoneNumber);
-
-    fetch("/api/send_sms/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ sender_phone: phoneNumber }),
-    })
-      .then((response) => {
-        console.log(response);
-        alert("SMS sent successfully!");
+    const contacts = getUserPhoneNumber();
+    if (contacts && contacts.length > 0) {
+      const phoneNumber = contacts[0].phoneNumbers[0].value;
+      fetch("/api/send_sms/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ sender_phone: phoneNumber }),
       })
-      .catch((error) => {
-        console.error(error);
-        alert("Failed to send SMS");
-      });
+        .then((response) => {
+          console.log(response);
+          alert("SMS sent successfully!");
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("Failed to send SMS");
+        });
+    } else {
+      console.error("User contacts not found");
+      alert("Failed to retrieve sender phone number");
+    }
   }
   useEffect(() => {
-    // sendSMS();
-    if ("pickContact" in navigator) {
-      console.log("pickContact is supported");
-    } else {
-      console.log("pickContact is not supported");
-    }
+    sendSMS();
   }, []);
 
   return (
