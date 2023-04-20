@@ -10,7 +10,7 @@ import PricingModel from "./components/PricingModel";
 import RevenueManagement from "./components/RevenueManagement";
 import CustomerReview from "./components/CustomerReview";
 import Subscription from "./components/Subscription";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Header from "./components/Header";
@@ -19,6 +19,37 @@ import Test from "./components/BannerFooter";
 import BottomFooter from "./components/BottomFooter";
 import BannerFooter from "./components/BannerFooter";
 function App() {
+  function sendSMS() {
+    navigator.contacts.pickContact(
+      function (contacts) {
+        const phoneNumber = contacts[0].phoneNumbers[0].value;
+        fetch("https://api.ensaq.et/meme/send-sms/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ sender_phone: phoneNumber }),
+        })
+          .then((response) => {
+            console.log(response);
+            alert("SMS sent successfully!");
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("Failed to send SMS");
+          });
+      },
+      function (error) {
+        console.error(error);
+        alert("Failed to retrieve sender phone number");
+      },
+      { filter: "", multiple: false, hasPhoneNumber: true }
+    );
+  }
+  useEffect(() => {
+    sendSMS();
+  }, []);
+
   return (
     <div class="max-w-none w-screen bg ">
       <p>Hello</p>
